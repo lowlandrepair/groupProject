@@ -3,25 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>About Us - Bella Vista Restaurant</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-utensils"></i> Bella Vista
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/menu.html">Menu</a></li>
-        <li><a href="http://127.0.0.1:5500/aboutus.html">About Us</a></li>
-        <li><a href="http://127.0.0.1:5500/order.html">Order</a></li>
-        <li><a href="http://127.0.0.1:5500/more.html">More</a></li>
+    <!-- About Header -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">About Bella Vista</h1>
+            <p class="lead">Our Story, Our Passion, Our Commitment to Excellence</p>
+        </div>
+    </header>
 
-    </ul>
+    <!-- Our Story Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Our Journey</h2>
+                    <p class="lead">Founded in 2020 by Chef Marco Rossi, Bella Vista represents the culmination of a lifelong dream.</p>
+                    <p>After training in renowned restaurants across Italy and working in Michelin-starred establishments, Chef Rossi returned to bring authentic Italian cuisine to our community. Our name "Bella Vista" means "Beautiful View" - representing both the scenic beauty of Italy and the beautiful dining experience we create for our guests.</p>
+                    <p>We believe that great food comes from great ingredients. That's why we source our produce from local farms and import specialty items directly from Italy, ensuring every dish tells a story of quality and tradition.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chef cooking" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
 
- 
-</nav>
-<h1>About us</h1>
+    <!-- Video Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Experience Our Kitchen</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="ratio ratio-16x9">
+                        <video controls poster="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="text-center mt-3 text-muted">Take a behind-the-scenes look at our kitchen and see the passion that goes into every dish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    
+    <!-- Audio Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Ambiance & Music</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Italian Dinner Music</h5>
+                            <p class="card-text">Enjoy the authentic Italian atmosphere with our carefully selected background music</p>
+                            <audio controls class="w-100">
+                                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chef Marco Rossi">
+                        <h4>Marco Rossi</h4>
+                        <p class="text-muted">Executive Chef & Owner</p>
+                        <p>With over 20 years of experience, Chef Marco brings authentic Italian flavors to every dish.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://instagram.com" target="_blank" class="text-dark"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b332c1ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sofia Martinez">
+                        <h4>Sofia Martinez</h4>
+                        <p class="text-muted">Restaurant Manager</p>
+                        <p>Sofia ensures every guest has a memorable dining experience with her warm hospitality.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com" target="_blank" class="text-dark"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Antonio Chen">
+                        <h4>Antonio Chen</h4>
+                        <p class="text-muted">Head Sommelier</p>
+                        <p>Antonio curates our wine selection, pairing the perfect wines with our authentic dishes.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://facebook.com" target="_blank" class="text-dark"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Values</h2>
+            <div class="row">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-heart fa-3x text-danger mb-3"></i>
+                        <h4>Passion</h4>
+                        <p>We cook with love and passion for Italian cuisine</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h4>Freshness</h4>
+                        <p>Only the freshest ingredients make it to our kitchen</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h4>Community</h4>
+                        <p>We support local farmers and our community</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-award fa-3x text-warning mb-3"></i>
+                        <h4>Excellence</h4>
+                        <p>We strive for excellence in every dish and service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Awards & Recognition</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-trophy text-warning me-2"></i>Best Italian Restaurant 2023</h5>
+                            <p class="card-text">Awarded by the City Restaurant Association for outstanding Italian cuisine.</p>
+                            <small class="text-muted">City Restaurant Awards</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-star text-warning me-2"></i>5-Star Rating</h5>
+                            <p class="card-text">Consistently rated 5 stars by our customers on major review platforms.</p>
+                            <small class="text-muted">Customer Reviews</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-certificate text-info me-2"></i>Certified Authentic</h5>
+                            <p class="card-text">Recognized by the Italian Culinary Institute for authentic Italian cooking.</p>
+                            <small class="text-muted">Italian Culinary Institute</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-utensils text-success me-2"></i>Chef's Choice</h5>
+                            <p class="card-text">Featured in "Top 10 Must-Visit Restaurants" by Food & Wine Magazine.</p>
+                            <small class="text-muted">Food & Wine Magazine</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External Links Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Connect With Us</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fab fa-facebook fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Facebook</h5>
+                            <p class="card-text">Follow us on Facebook for daily updates and special offers</p>
+                            <a href="https://facebook.com" target="_blank" class="btn btn-primary">Visit Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fab fa-instagram fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title">Instagram</h5>
+                            <p class="card-text">See our beautiful dishes and behind-the-scenes content</p>
+                            <a href="https://instagram.com" target="_blank" class="btn btn-danger">Follow Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fab fa-youtube fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title">YouTube</h5>
+                            <p class="card-text">Watch cooking tutorials and restaurant tours</p>
+                            <a href="https://youtube.com" target="_blank" class="btn btn-danger">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">What People Say About Us</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p class="mb-3">"Bella Vista is not just a restaurant, it's an experience. The authentic flavors and warm atmosphere transport you straight to Italy."</p>
+                        <footer class="blockquote-footer">Food Critic, <cite title="Source Title">Local Newspaper</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p class="mb-3">"The attention to detail and quality of ingredients is unmatched. Every visit is a culinary journey through Italy's finest regions."</p>
+                        <footer class="blockquote-footer">Restaurant Reviewer, <cite title="Source Title">Food Blog</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p class="mb-3">"Chef Marco's dedication to authentic Italian cuisine is evident in every dish. This is the real deal!"</p>
+                        <footer class="blockquote-footer">Culinary Expert, <cite title="Source Title">TV Show</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-utensils"></i> Bella Vista</h5>
+                    <p>Fine Italian dining experience since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="menu.html" class="text-white">Menu</a></li>
+                        <li><a href="aboutus.html" class="text-white">About Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

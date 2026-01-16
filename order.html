@@ -3,24 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Order & Reservations - Bella Vista Restaurant</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-utensils"></i> Bella Vista
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/menu.html">Menu</a></li>
-        <li><a href="http://127.0.0.1:5500/aboutus.html">About Us</a></li>
-        <li><a href="http://127.0.0.1:5500/order.html">Order</a></li>
-        <li><a href="http://127.0.0.1:5500/more.html">More</a></li>
+    <!-- Order Header -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">Make a Reservation</h1>
+            <p class="lead">Book your table or order online for pickup</p>
+        </div>
+    </header>
 
-    </ul>
+    <!-- Order Forms Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Reservation Form -->
+                <div class="col-lg-6 mb-4">
+                    <div class="order-form">
+                        <h3 class="mb-4"><i class="fas fa-calendar-alt me-2"></i>Table Reservation</h3>
+                        <form id="reservationForm" novalidate>
+                            <div class="mb-3">
+                                <label for="resName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="resName" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="resEmail" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="resEmail" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="resPhone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="resPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567" required>
+                                <div class="invalid-feedback">Please enter a valid phone number (555-123-4567).</div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="resDate" class="form-label">Date *</label>
+                                    <input type="date" class="form-control" id="resDate" required>
+                                    <div class="invalid-feedback">Please select a date.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="resTime" class="form-label">Time *</label>
+                                    <select class="form-control" id="resTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="11:30">11:30 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="12:30">12:30 PM</option>
+                                        <option value="13:00">1:00 PM</option>
+                                        <option value="13:30">1:30 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="17:30">5:30 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="18:30">6:30 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="19:30">7:30 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                        <option value="20:30">8:30 PM</option>
+                                        <option value="21:00">9:00 PM</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a time.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="resGuests" class="form-label">Number of Guests *</label>
+                                <select class="form-control" id="resGuests" required>
+                                    <option value="">Select Guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6 Guests</option>
+                                    <option value="7">7 Guests</option>
+                                    <option value="8">8+ Guests</option>
+                                </select>
+                                <div class="invalid-feedback">Please select number of guests.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="resOccasion" class="form-label">Occasion (Optional)</label>
+                                <select class="form-control" id="resOccasion">
+                                    <option value="">Select Occasion</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="date">Date Night</option>
+                                    <option value="business">Business Dinner</option>
+                                    <option value="family">Family Gathering</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="resRequests" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="resRequests" rows="3" placeholder="Any dietary restrictions or special requests?"></textarea>
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="resTerms" required>
+                                <label class="form-check-label" for="resTerms">
+                                    I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms and conditions</a> *
+                                </label>
+                                <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Make Reservation</button>
+                        </form>
+                    </div>
+                </div>
 
- 
-</nav>
+                <!-- Online Order Form -->
+                <div class="col-lg-6 mb-4">
+                    <div class="order-form">
+                        <h3 class="mb-4"><i class="fas fa-shopping-cart me-2"></i>Online Order</h3>
+                        <form id="orderForm" novalidate>
+                            <div class="mb-3">
+                                <label for="orderName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="orderName" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="orderEmail" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="orderEmail" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="orderPhone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="orderPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567" required>
+                                <div class="invalid-feedback">Please enter a valid phone number (555-123-4567).</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="orderType" class="form-label">Order Type *</label>
+                                <select class="form-control" id="orderType" required>
+                                    <option value="">Select Order Type</option>
+                                    <option value="pickup">Pickup</option>
+                                    <option value="delivery">Delivery (within 5 miles)</option>
+                                </select>
+                                <div class="invalid-feedback">Please select order type.</div>
+                            </div>
+                            
+                            <div id="deliveryAddress" class="mb-3" style="display: none;">
+                                <label for="orderAddress" class="form-label">Delivery Address *</label>
+                                <input type="text" class="form-control" id="orderAddress" placeholder="Street Address">
+                                <div class="invalid-feedback">Please enter your delivery address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="orderTime" class="form-label">Pickup/Delivery Time *</label>
+                                <select class="form-control" id="orderTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="asap">ASAP (15-20 min)</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="13:30">1:30 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a time.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Menu Items *</label>
+                                <div id="menuItems">
+                                    <div class="menu-item-row mb-2">
+                                        <select class="form-control me-2" name="menuItem" required>
+                                            <option value="">Select Item</option>
+                                            <option value="Margherita Pizza">Margherita Pizza - $12.99</option>
+                                            <option value="Spaghetti Carbonara">Spaghetti Carbonara - $14.99</option>
+                                            <option value="Fettuccine Alfredo">Fettuccine Alfredo - $16.99</option>
+                                            <option value="Lasagna Bolognese">Lasagna Bolognese - $15.99</option>
+                                            <option value="Chicken Marsala">Chicken Marsala - $19.99</option>
+                                            <option value="Grilled Salmon">Grilled Salmon - $22.99</option>
+                                            <option value="Caesar Salad">Caesar Salad - $7.99</option>
+                                            <option value="Bruschetta">Bruschetta - $8.99</option>
+                                            <option value="Tiramisu">Tiramisu - $7.99</option>
+                                        </select>
+                                        <input type="number" class="form-control" name="quantity" min="1" max="10" value="1" style="width: 80px;" required>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="removeMenuItem(this)">Remove</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-2" onclick="addMenuItem()">Add Item</button>
+                                <div class="invalid-feedback">Please select at least one menu item.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="orderNotes" class="form-label">Order Notes</label>
+                                <textarea class="form-control" id="orderNotes" rows="2" placeholder="Special instructions or allergies?"></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="orderPayment" class="form-label">Payment Method *</label>
+                                <select class="form-control" id="orderPayment" required>
+                                    <option value="">Select Payment</option>
+                                    <option value="card">Credit Card (pay on pickup)</option>
+                                    <option value="cash">Cash (pay on pickup)</option>
+                                    <option value="online">Online Payment</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a payment method.</div>
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="orderTerms" required>
+                                <label class="form-check-label" for="orderTerms">
+                                    I agree to the <a href="#" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#termsModal">terms and conditions</a> *
+                                </label>
+                                <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5>Total: $<span id="orderTotal">0.00</span></h5>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1>Order</h1>
+    <!-- Contact Information -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Information</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                    <h4>Phone</h4>
+                    <p>(555) 123-4567</p>
+                    <p class="text-muted">Call us for reservations</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="fas fa-envelope fa-3x text-success mb-3"></i>
+                    <h4>Email</h4>
+                    <p>info@bellavista.com</p>
+                    <p class="text-muted">Email us for inquiries</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <i class="fas fa-clock fa-3x text-warning mb-3"></i>
+                    <h4>Hours</h4>
+                    <p>Mon-Fri: 11:00 AM - 10:00 PM</p>
+                    <p>Sat-Sun: 11:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Reservation Policy</h6>
+                    <ul>
+                        <li>Reservations must be made at least 2 hours in advance</li>
+                        <li>Cancellations must be made at least 1 hour before reservation time</li>
+                        <li>Late arrivals (15+ minutes) may result in cancellation</li>
+                        <li>Large parties (6+ guests) may require a deposit</li>
+                    </ul>
+                    
+                    <h6>Order Policy</h6>
+                    <ul>
+                        <li>Online orders must be placed at least 30 minutes in advance</li>
+                        <li>Delivery available within 5-mile radius</li>
+                        <li>Delivery fee: $3.99</li>
+                        <li>Minimum order for delivery: $25.00</li>
+                    </ul>
+                    
+                    <h6>Payment Policy</h6>
+                    <ul>
+                        <li>All prices are subject to tax</li>
+                        <li>Gratuity not included for delivery orders</li>
+                        <li>We accept all major credit cards and cash</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Success!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="successMessage"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-utensils"></i> Bella Vista</h5>
+                    <p>Fine Italian dining experience since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="menu.html" class="text-white">Menu</a></li>
+                        <li><a href="aboutus.html" class="text-white">About Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,26 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Menu - Bella Vista Restaurant</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-utensils"></i> Bella Vista
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/menu.html">Menu</a></li>
-        <li><a href="http://127.0.0.1:5500/aboutus.html">About Us</a></li>
-        <li><a href="http://127.0.0.1:5500/order.html">Order</a></li>
-        <li><a href="http://127.0.0.1:5500/more.html">More</a></li>
+    <!-- Menu Header -->
+    <header class="menu-section bg-light text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Our Menu</h1>
+            <p class="lead">Discover our authentic Italian cuisine crafted with love and fresh ingredients</p>
+        </div>
+    </header>
 
-    </ul>
+    <!-- Menu Content -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- Appetizers -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="menu-card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-cheese me-2"></i>Appetizers</h3>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Bruschetta Classica</div>
+                                    <small class="text-muted">Toasted bread with tomatoes, garlic, and basil</small>
+                                </div>
+                                <div class="menu-item-price">$8.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Antipasto della Casa</div>
+                                    <small class="text-muted">Selection of cured meats, cheeses, and olives</small>
+                                </div>
+                                <div class="menu-item-price">$12.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Calamari Fritti</div>
+                                    <small class="text-muted">Crispy fried squid rings with marinara sauce</small>
+                                </div>
+                                <div class="menu-item-price">$10.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Caprese Salad</div>
+                                    <small class="text-muted">Fresh mozzarella, tomatoes, and basil</small>
+                                </div>
+                                <div class="menu-item-price">$9.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soups & Salads -->
+                <div class="col-lg-6">
+                    <div class="menu-card">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="mb-0"><i class="fas fa-leaf me-2"></i>Soups & Salads</h3>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Minestrone</div>
+                                    <small class="text-muted">Traditional Italian vegetable soup</small>
+                                </div>
+                                <div class="menu-item-price">$6.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Zuppa di Pomodoro</div>
+                                    <small class="text-muted">Creamy tomato soup with fresh basil</small>
+                                </div>
+                                <div class="menu-item-price">$5.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Caesar Salad</div>
+                                    <small class="text-muted">Romaine lettuce, parmesan, croutons</small>
+                                </div>
+                                <div class="menu-item-price">$7.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Insalata di Mare</div>
+                                    <small class="text-muted">Mixed seafood salad with lemon dressing</small>
+                                </div>
+                                <div class="menu-item-price">$13.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
- 
-</nav>
+            <!-- Pasta Main Courses -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="menu-card">
+                        <div class="card-header bg-danger text-white">
+                            <h3 class="mb-0"><i class="fas fa-bowl-food me-2"></i>Pasta Dishes</h3>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Spaghetti Carbonara</div>
+                                    <small class="text-muted">Creamy sauce with bacon and parmesan</small>
+                                </div>
+                                <div class="menu-item-price">$14.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Fettuccine Alfredo</div>
+                                    <small class="text-muted">Rich cream sauce with grilled chicken</small>
+                                </div>
+                                <div class="menu-item-price">$16.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Lasagna Bolognese</div>
+                                    <small class="text-muted">Layers of pasta with meat sauce and cheese</small>
+                                </div>
+                                <div class="menu-item-price">$15.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Penne Arrabbiata</div>
+                                    <small class="text-muted">Spicy tomato sauce with garlic and chili</small>
+                                </div>
+                                <div class="menu-item-price">$13.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<h1>Menu</h1>
+                <!-- Pizza -->
+                <div class="col-lg-6">
+                    <div class="menu-card">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="mb-0"><i class="fas fa-pizza-slice me-2"></i>Pizza</h3>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Margherita</div>
+                                    <small class="text-muted">Tomato, mozzarella, basil</small>
+                                </div>
+                                <div class="menu-item-price">$12.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Pepperoni Special</div>
+                                    <small class="text-muted">Double pepperoni with extra cheese</small>
+                                </div>
+                                <div class="menu-item-price">$14.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Quattro Stagioni</div>
+                                    <small class="text-muted">Four seasons with artichokes, ham, mushrooms</small>
+                                </div>
+                                <div class="menu-item-price">$16.99</div>
+                            </div>
+                            <div class="menu-item">
+                                <div>
+                                    <div class="menu-item-name">Seafood Pizza</div>
+                                    <small class="text-muted">Shrimp, mussels, calamari, garlic</small>
+                                </div>
+                                <div class="menu-item-price">$18.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    
+            <!-- Main Courses Table -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4"><i class="fas fa-drumstick-bite me-2"></i>Main Courses</h3>
+                    <div class="table-responsive">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Dish</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Osso Buco</strong></td>
+                                    <td>Braised veal shanks with vegetables</td>
+                                    <td class="text-danger fw-bold">$24.99</td>
+                                    <td><span class="badge bg-primary">Beef</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Chicken Marsala</strong></td>
+                                    <td>Chicken with mushrooms in Marsala wine sauce</td>
+                                    <td class="text-danger fw-bold">$19.99</td>
+                                    <td><span class="badge bg-success">Chicken</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Grilled Salmon</strong></td>
+                                    <td>Fresh salmon with lemon butter sauce</td>
+                                    <td class="text-danger fw-bold">$22.99</td>
+                                    <td><span class="badge bg-info">Seafood</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Veal Piccata</strong></td>
+                                    <td>Veal with capers, lemon, and white wine</td>
+                                    <td class="text-danger fw-bold">$21.99</td>
+                                    <td><span class="badge bg-primary">Veal</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lobster Ravioli</strong></td>
+                                    <td>Homemade ravioli with lobster cream sauce</td>
+                                    <td class="text-danger fw-bold">$26.99</td>
+                                    <td><span class="badge bg-info">Seafood</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4"><i class="fas fa-ice-cream me-2"></i>Desserts</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center">
+                                <img src="https://images.unsplash.com/photo-1564900714229-19cf85206d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Tiramisu">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tiramisu</h5>
+                                    <p class="card-text">Classic Italian dessert</p>
+                                    <p class="text-danger fw-bold">$7.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center">
+                                <img src="https://images.unsplash.com/photo-1571875256956-7144b9cdc0c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Cannoli">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cannoli</h5>
+                                    <p class="card-text">Sicilian pastry with ricotta</p>
+                                    <p class="text-danger fw-bold">$6.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center">
+                                <img src="https://images.unsplash.com/photo-1565958011703-44f9829baead?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Gelato">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gelato Selection</h5>
+                                    <p class="card-text">Three scoops of choice</p>
+                                    <p class="text-danger fw-bold">$5.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages Table -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-4"><i class="fas fa-wine-glass me-2"></i>Beverages</h3>
+                    <div class="table-responsive">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Beverage</th>
+                                    <th>Type</th>
+                                    <th>Price</th>
+                                    <th>Available</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>House Wine (Red/White)</td>
+                                    <td>Wine</td>
+                                    <td class="text-danger fw-bold">$8.99</td>
+                                    <td><span class="badge bg-success">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Chianti Classico</td>
+                                    <td>Premium Wine</td>
+                                    <td class="text-danger fw-bold">$12.99</td>
+                                    <td><span class="badge bg-success">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Prosecco</td>
+                                    <td>Sparkling Wine</td>
+                                    <td class="text-danger fw-bold">$10.99</td>
+                                    <td><span class="badge bg-warning">Limited</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Italian Coffee</td>
+                                    <td>Coffee</td>
+                                    <td class="text-danger fw-bold">$3.99</td>
+                                    <td><span class="badge bg-success">Available</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Soft Drinks</td>
+                                    <td>Non-alcoholic</td>
+                                    <td class="text-danger fw-bold">$2.99</td>
+                                    <td><span class="badge bg-success">Available</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Ready to Order?</h2>
+            <p class="lead mb-4">Make a reservation or order online for pickup</p>
+            <a href="order.html" class="btn btn-light btn-lg me-3">Order Now</a>
+            <a href="tel:5551234567" class="btn btn-outline-light btn-lg">Call Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-utensils"></i> Bella Vista</h5>
+                    <p>Fine Italian dining experience since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="menu.html" class="text-white">Menu</a></li>
+                        <li><a href="aboutus.html" class="text-white">About Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

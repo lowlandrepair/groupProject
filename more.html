@@ -3,24 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Interactive Features - Bella Vista Restaurant</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-utensils"></i> Bella Vista
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/menu.html">Menu</a></li>
-        <li><a href="http://127.0.0.1:5500/aboutus.html">About Us</a></li>
-        <li><a href="http://127.0.0.1:5500/order.html">Order</a></li>
-        <li><a href="http://127.0.0.1:5500/more.html">More</a></li>
+    <!-- Interactive Header -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">Interactive Features</h1>
+            <p class="lead">Explore our interactive games, calculators, and dynamic content</p>
+        </div>
+    </header>
 
-    </ul>
+    <!-- Interactive Games Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Fun & Games</h2>
+            
+            <!-- Number Guessing Game -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-dice me-2"></i>Number Guessing Game</h3>
+                        <p>Try to guess the number between 1 and 100!</p>
+                        <div class="mb-3">
+                            <input type="number" id="guessInput" class="form-control" placeholder="Enter your guess (1-100)" min="1" max="100">
+                        </div>
+                        <button onclick="checkGuess()" class="btn btn-primary">Guess!</button>
+                        <button onclick="resetGuessGame()" class="btn btn-secondary ms-2">New Game</button>
+                        <div id="guessResult" class="mt-3"></div>
+                        <div class="mt-3">
+                            <strong>Attempts: <span id="attempts">0</span></strong>
+                        </div>
+                    </div>
+                </div>
 
- 
-</nav>
+                <!-- Word Scramble Game -->
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-spell-check me-2"></i>Word Scramble</h3>
+                        <p>Unscramble the Italian food-related word!</p>
+                        <div class="mb-3">
+                            <h4 id="scrambledWord" class="text-primary">Click Start to begin!</h4>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="wordGuess" class="form-control" placeholder="Enter your answer">
+                        </div>
+                        <button onclick="startWordGame()" class="btn btn-primary">Start</button>
+                        <button onclick="checkWord()" class="btn btn-success ms-2">Check</button>
+                        <button onclick="getHint()" class="btn btn-warning ms-2">Hint</button>
+                        <div id="wordResult" class="mt-3"></div>
+                        <div class="mt-3">
+                            <strong>Score: <span id="wordScore">0</span></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h1>More</h1>
+            <!-- Quiz Game -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="game-container">
+                        <h3><i class="fas fa-question-circle me-2"></i>Italian Cuisine Quiz</h3>
+                        <div id="quizContainer">
+                            <div class="mb-3">
+                                <h5 id="questionText">Click Start to begin the quiz!</h5>
+                            </div>
+                            <div id="quizOptions" class="mb-3"></div>
+                            <button onclick="startQuiz()" class="btn btn-primary">Start Quiz</button>
+                            <button onclick="checkAnswer()" class="btn btn-success ms-2" id="checkAnswerBtn" style="display: none;">Check Answer</button>
+                            <button onclick="nextQuestion()" class="btn btn-info ms-2" id="nextQuestionBtn" style="display: none;">Next Question</button>
+                        </div>
+                        <div class="mt-3">
+                            <strong>Question <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span></strong>
+                            <div class="mt-2">
+                                <strong>Score: <span id="quizScore">0</span></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Useful Tools</h2>
+            
+            <!-- Tip Calculator -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-calculator me-2"></i>Tip Calculator</h3>
+                        <div class="mb-3">
+                            <label for="billAmount" class="form-label">Bill Amount ($)</label>
+                            <input type="number" id="billAmount" class="form-control" placeholder="Enter bill amount" step="0.01" min="0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipPercentage" class="form-label">Tip Percentage (%)</label>
+                            <input type="range" id="tipPercentage" class="form-range" min="0" max="30" value="15" oninput="updateTipDisplay()">
+                            <div class="d-flex justify-content-between">
+                                <small>0%</small>
+                                <span id="tipDisplay">15%</span>
+                                <small>30%</small>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="splitCount" class="form-label">Split Between</label>
+                            <input type="number" id="splitCount" class="form-control" value="1" min="1" max="20">
+                        </div>
+                        <button onclick="calculateTip()" class="btn btn-primary">Calculate</button>
+                        <div id="tipResult" class="mt-3"></div>
+                    </div>
+                </div>
+
+                <!-- Calorie Counter -->
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-fire me-2"></i>Calorie Counter</h3>
+                        <div class="mb-3">
+                            <label for="foodSelect" class="form-label">Select Food Item</label>
+                            <select id="foodSelect" class="form-control">
+                                <option value="">Choose a food item</option>
+                                <option value="250">Margherita Pizza (slice)</option>
+                                <option value="180">Spaghetti Carbonara</option>
+                                <option value="220">Fettuccine Alfredo</option>
+                                <option value="280">Lasagna Bolognese</option>
+                                <option value="190">Chicken Marsala</option>
+                                <option value="150">Grilled Salmon</option>
+                                <option value="80">Caesar Salad</option>
+                                <option value="60">Bruschetta</option>
+                                <option value="240">Tiramisu</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="foodQuantity" class="form-label">Quantity</label>
+                            <input type="number" id="foodQuantity" class="form-control" value="1" min="1" max="10">
+                        </div>
+                        <button onclick="addFood()" class="btn btn-primary">Add Food</button>
+                        <button onclick="clearCalories()" class="btn btn-secondary ms-2">Clear All</button>
+                        <div id="calorieList" class="mt-3"></div>
+                        <div class="mt-3">
+                            <strong>Total Calories: <span id="totalCalories">0</span></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Array Operations Demo -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">JavaScript Array Operations</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-list me-2"></i>Menu Array Operations</h3>
+                        <div class="mb-3">
+                            <button onclick="showAllItems()" class="btn btn-info btn-sm">Show All Items</button>
+                            <button onclick="filterVegetarian()" class="btn btn-success btn-sm ms-2">Filter Vegetarian</button>
+                            <button onclick="sortPrices()" class="btn btn-warning btn-sm ms-2">Sort by Price</button>
+                            <button onclick="findExpensive()" class="btn btn-danger btn-sm ms-2">Find Expensive</button>
+                        </div>
+                        <div id="arrayResult" class="mt-3"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-code me-2"></i>Loop Demonstrations</h3>
+                        <div class="mb-3">
+                            <button onclick="demonstrateLoops()" class="btn btn-primary">Demonstrate Loops</button>
+                            <button onclick="showPattern()" class="btn btn-info ms-2">Show Pattern</button>
+                            <button onclick="countDown()" class="btn btn-success ms-2">Countdown</button>
+                        </div>
+                        <div id="loopResult" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditional Logic Demo -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Conditional Logic & Decision Making</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-brain me-2"></i>Restaurant Recommender</h3>
+                        <div class="mb-3">
+                            <label class="form-label">What's your mood?</label>
+                            <select id="moodSelect" class="form-control">
+                                <option value="">Select mood</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="casual">Casual</option>
+                                <option value="family">Family-friendly</option>
+                                <option value="business">Business</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Budget per person</label>
+                            <select id="budgetSelect" class="form-control">
+                                <option value="">Select budget</option>
+                                <option value="low">$10-20</option>
+                                <option value="medium">$20-40</option>
+                                <option value="high">$40+</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Preferred cuisine</label>
+                            <select id="cuisineSelect" class="form-control">
+                                <option value="">Select cuisine</option>
+                                <option value="italian">Italian</option>
+                                <option value="seafood">Seafood</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="meat">Meat dishes</option>
+                            </select>
+                        </div>
+                        <button onclick="getRecommendation()" class="btn btn-primary">Get Recommendation</button>
+                        <div id="recommendationResult" class="mt-3"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="game-container">
+                        <h3><i class="fas fa-utensils me-2"></i>Dish Selector</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Dietary restrictions</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="vegetarian">
+                                <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="glutenFree">
+                                <label class="form-check-label" for="glutenFree">Gluten-free</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="dairyFree">
+                                <label class="form-check-label" for="dairyFree">Dairy-free</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Spice level</label>
+                            <select id="spiceLevel" class="form-control">
+                                <option value="mild">Mild</option>
+                                <option value="medium">Medium</option>
+                                <option value="spicy">Spicy</option>
+                                <option value="verySpicy">Very Spicy</option>
+                            </select>
+                        </div>
+                        <button onclick="suggestDish()" class="btn btn-primary">Suggest Dish</button>
+                        <div id="dishResult" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Content Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Dynamic Content Generation</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="game-container">
+                        <h3><i class="fas fa-magic me-2"></i>Content Generator</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Generate content type</label>
+                            <select id="contentType" class="form-control">
+                                <option value="menu">Random Menu Items</option>
+                                <option value="reviews">Customer Reviews</option>
+                                <option value="recipes">Recipe Ideas</option>
+                                <option value="events">Special Events</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Number of items</label>
+                            <input type="number" id="itemCount" class="form-control" value="3" min="1" max="10">
+                        </div>
+                        <button onclick="generateContent()" class="btn btn-primary">Generate Content</button>
+                        <button onclick="clearGeneratedContent()" class="btn btn-secondary ms-2">Clear</button>
+                        <div id="generatedContent" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-utensils"></i> Bella Vista</h5>
+                    <p>Fine Italian dining experience since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="menu.html" class="text-white">Menu</a></li>
+                        <li><a href="aboutus.html" class="text-white">About Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

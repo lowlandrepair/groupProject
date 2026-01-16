@@ -3,24 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Bella Vista Restaurant - Fine Dining Experience</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-utensils"></i> Bella Vista
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/menu.html">Menu</a></li>
-        <li><a href="http://127.0.0.1:5500/aboutus.html">About Us</a></li>
-        <li><a href="http://127.0.0.1:5500/order.html">Order</a></li>
-        <li><a href="http://127.0.0.1:5500/more.html">More</a></li>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">Welcome to Bella Vista</h1>
+            <p class="lead mb-4">Experience Fine Dining at Its Best</p>
+            <a href="menu.html" class="btn btn-primary btn-lg me-3">View Menu</a>
+            <a href="order.html" class="btn btn-outline-light btn-lg">Make Reservation</a>
+        </div>
+    </header>
 
-    </ul>
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p class="lead">Founded in 2020, Bella Vista brings authentic Italian cuisine to your table with a modern twist.</p>
+                    <p>Our chef's commitment to using only the freshest ingredients ensures every dish is a masterpiece. From handmade pasta to wood-fired pizzas, we celebrate the rich culinary traditions of Italy.</p>
+                    <a href="aboutus.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Restaurant Interior" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
 
- 
-</nav>
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Bella Vista?</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-award fa-3x text-primary mb-3"></i>
+                        <h4>Award Winning</h4>
+                        <p>Recognized as the best Italian restaurant in the city for three consecutive years.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h4>Fresh Ingredients</h4>
+                        <p>We source our ingredients locally and import specialty items directly from Italy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-users fa-3x text-info mb-3"></i>
+                        <h4>Expert Chefs</h4>
+                        <p>Our culinary team has over 50 years of combined experience in Italian cuisine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Gallery</h2>
+            <div class="row gallery">
+                <div class="col-md-4 mb-4">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza" class="img-fluid rounded gallery-item">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pasta" class="img-fluid rounded gallery-item">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wine" class="img-fluid rounded gallery-item">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Experience Bella Vista</h2>
+            <div class="ratio ratio-16x9 mb-4">
+                <video controls poster="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Absolutely amazing food and service! The best Italian restaurant I've ever been to."</p>
+                            <footer class="blockquote-footer">Sarah Johnson</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"The atmosphere is perfect for date night. Romantic and elegant with incredible food."</p>
+                            <footer class="blockquote-footer">Michael Chen</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Authentic Italian flavors that transport you straight to Italy. Highly recommend!"</p>
+                            <footer class="blockquote-footer">Emma Rodriguez</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-utensils"></i> Bella Vista</h5>
+                    <p>Fine Italian dining experience since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="menu.html" class="text-white">Menu</a></li>
+                        <li><a href="aboutus.html" class="text-white">About Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, State 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
